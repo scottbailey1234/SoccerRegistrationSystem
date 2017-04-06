@@ -25,6 +25,17 @@ namespace SoccerRegistrationSystem.Models
         [Display(Name = "Player Last Name")]
         public string LastName { get; set; }
 
-        public DateTime BirthDay;
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        //[Display(Name = "Birthday")]
+        public DateTime BirthDay;/* { get; set; }*/
     }
-}
+    }
+
+//    NOTE: Example of how date entry is used in the Contoso project.
+
+//    [DataType(DataType.Date)]
+//    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+//    [Display(Name = "Hire Date")]
+//    public DateTime HireDate { get; set; }
+//}

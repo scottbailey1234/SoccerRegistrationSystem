@@ -9,8 +9,8 @@ using SoccerRegistrationSystem.Models;
 namespace SoccerRegistrationSystem.Migrations
 {
     [DbContext(typeof(LeagueContext))]
-    [Migration("20170406062713_BirthDate")]
-    partial class BirthDate
+    [Migration("20170406182403_BirthDay")]
+    partial class BirthDay
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,8 @@ namespace SoccerRegistrationSystem.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("BirthDay");
 
                     b.Property<string>("Discriminator")
                         .IsRequired();
@@ -76,30 +78,15 @@ namespace SoccerRegistrationSystem.Migrations
                 {
                     b.HasBaseType("SoccerRegistrationSystem.Models.Person");
 
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.Property<int?>("ElementarySchool");
 
                     b.Property<string>("GuardianName")
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<string>("StreetAddress")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.Property<int?>("TeamID");
 
                     b.Property<int>("YearsExperience");
-
-                    b.Property<int>("ZipCode")
-                        .HasMaxLength(5);
 
                     b.HasIndex("TeamID");
 
