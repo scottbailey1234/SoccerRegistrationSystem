@@ -6,6 +6,7 @@ using SoccerRegistrationSystem.Models;
 
 namespace SoccerRegistrationSystem.Data
 {
+    //note
     public class DbInitializer
     {
         public static void Initialize(LeagueContext context)
